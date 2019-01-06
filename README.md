@@ -8,6 +8,9 @@ I evalute the three Liniar models and saw that their test scores were lower than
 
 The models were estimated using three indicates: Rsquare, root mean square error (RMSE), and an absolute absolute error rate (MAPE). Using these measures I could compare different regression models (linear and nonlinear). The results showed that the Artificial Neural Networks model had the best scores with R square = 0.8121, RMSE = 0.2451, MAPE = 2.26%
 
+* The project is part of a commercial product development, so I can not share the full data
+
+
 ## Data structure
 
 |     Params    |       Type     |   Mean     |  sd    |
