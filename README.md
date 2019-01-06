@@ -3,6 +3,7 @@ This project deals with the prediction of broiler temperature using statistical 
 
 In this project, I tried to predict temperature of broiler in coop by data from a thermal camera. The data came from an experiment conducted in a broiler coop that included precise sensors and cameras. In this experiment, 1355 observations were collected, 65% of which were used to train the models, and 35% were used to test the models.
 I made predictions in several different statistical methods. First I examined the data, exploratory data analysis, tried to understand how each variable might explain the problem, and examined the relationships and dependencies between the variables. I used linear models such as linear regression and lasso regression, used statistical methods to select the explanatory variables such as backward regression. I also performed various cross validation methods to evaluate the error and select a model, I have also tried to reduce the problem dimensions with Transformations of Primary Factor Analysis (PCA).
+
 I evalute the three Liniar models and saw that their test scores were lower than the results I wish for. So, I decided to try other methods of machine learning. I tried two methods: Random Forest and Artificial Neural Networks. In each model I performed cross validation in order to tune the parameters: in Random Forest these were the number of trees and the amount of parameters in each tree, and in these Artificial Neural Networks were the number of neurons in each layer.
 
 The models were estimated using three indicates: Rsquare, root mean square error (RMSE), and an absolute absolute error rate (MAPE). Using these measures I could compare different regression models (linear and nonlinear). The results showed that the Artificial Neural Networks model had the best scores with R square = 0.8121, RMSE = 0.2451, MAPE = 2.26%
@@ -140,7 +141,7 @@ After the training, I tested the models on test data set. The indices I used for
 
 test results:
 |model|	R square|	RMSE|	MAPE|
-|-|-|-|-|
+|----|-----|------|------|
 |Lasso|	0.6843|	0.3185|	2.98|
 |Backward|	0.6947	|0.3115|	2.91|
 |PCA	|0.5566	|0.3753	|3.50|
