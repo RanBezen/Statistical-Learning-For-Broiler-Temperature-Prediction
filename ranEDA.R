@@ -13,8 +13,6 @@ data_scale<-function(data){
   return(scaled)
 }
 #------------------------------upload dataset------------------------------
-setwd("C:\\Users\\ran\\Desktop\\statistic")
-#setwd("C:\\Users\\ranbezen\\Google Drive\\statistic")  
 res<-read.csv('dataset.csv', header = TRUE, stringsAsFactors = FALSE)
 
 set.seed(8)
