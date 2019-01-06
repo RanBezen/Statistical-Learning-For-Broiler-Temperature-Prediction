@@ -80,3 +80,78 @@ The model that is attached contains all the parameters:
 - time_num      |-0.1531332577
 
  R square= 0.6898, adj R square=0.6867
+ 
+ You can see the residual chart and the QQplot:
+We can identify a normal distribution of errors and equality of variances around the 0.
+The Shapiro Wicks test is significant: W = 0.99497747, p-value = 0.005289821
+# image10
+# image11
+
+### backward regression
+Here I did leave one out Cross Validation on a backward selection algorithm to select the best model.
+The selected model contains 6 parameters and  an intercept, it can be seen that the explanatory variables are the standard deviation of 30 px and the two percentiles. They were probably scaled because of multicolinarity as we suspected in the EDA 
+# image12
+Rsqr=0.6879, adj R sqr=0.6858
+
+You can see the residual chart and the QQplot:
+We can identify a normal distribution of errors and equality of variances around the 0.
+The Shapiro Wicks test is significant: W = 0.99497429, p-value = 0.005266207
+# image13
+
+### Principal Component Analysis (PCA) regression 
+With PCA I took all data. My assumption was that linear transformations could be performed by using the eigan vectors of the highest eigan values in the covariance matrix to reduce the dimensionallity, but would still explain 80% of the variance of the data.
+It is possible to see that the first three main factors (PC1, PC2, PC3) are sufficient to explain 88.49% of the variance.
+# image14
+# image15
+It can be seen that with this method, the dimension of the problem decreases significantly, but the regression indices decrease too:
+# image16
+ Rsqr=0.57, adj R sqr=0.5685
+ 
+  You can see the residual chart and the QQplot:
+We can identify a normal distribution of errors and equality of variances around the 0.
+The Shapiro Wicks test is significant: W = 0.99437565, p-value = 0.002290684
+# image17
+
+### Random forest
+In this model I chose two parameters: the number of parameters in each tree, and the number of trees. I made the choice with 10 folds cross validation and with grid search. Finally, I took the model with the smallest mean square error.
+In these graphs you can see the grid search optimization process. Each diagram shows one free parameter against the MSE, given that the second parameter is fixed on its optimal value
+# image18
+At the end of the parameter adjustment process, the lowest MSE value was 43 trees with 7 parameters per tree
+# image 19
+Training error graph
+# imag20
+
+### Artificial neural networks with 3 hidden layers
+In this model I chose 3 parameters that represent the number of neurons in each hidden layer. I made the choice with 10 folds cross validation by using a grid search of the three parameters to minimize the mean square error estimated.
+
+before the network training, I made a scaled the data (both x and y) to easier the network weights to convergence.
+
+
+In the following diagrams, the MSE vs. number of neurons in one layer, while the number of neurons in the other two layers is determined by the optimal value found
+# image 21
+# image 22
+# image 23
+Finally, the model with the smallest mean square error is a model with 5 neurons in the first layer, 5 neurons in the second layer, and 3 neurons in the third layer. validation mean square error: 0.0567
+The final structure of the network:
+# image 24
+
+## Results
+After the training, I tested the models on test data set. The indices I used for comparison are Rsquare, root mean square error (RMSE) and Mean absolute percent error (MAPE). These three measures can compare linear and nonlinear regression models. 
+
+test results:
+|model|	R square|	RMSE|	MAPE|
+|-|-|-|-|
+|Lasso|	0.6843|	0.3185|	2.98|
+|Backward|	0.6947	|0.3115|	2.91|
+|PCA	|0.5566	|0.3753	|3.50|
+|Random Forest	|0.7984	|0.2531	|2.31|
+|Neural Networks|	0.8121|	0.2451	|2.26|
+
+We can see that the neuronal networks have the best results in the three measures:
+R square=0.8121 , RMSE=0.2451, MAPE =2.26%
+
+
+The following graphs show the test results. The red line marks the RMSE and green the Rsqaure. In the bottom chart you can see the MAPE marked on the blue line
+# image25
+
+
