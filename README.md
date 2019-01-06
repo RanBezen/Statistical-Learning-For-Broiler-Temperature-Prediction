@@ -68,15 +68,15 @@ First I ran a scale to the data matrix and then ran 10 folds cross validation. I
 # image9
 The selected lambda is the lambda that minimizes the mean square error 0.004
 The model that is attached contains all the parameters:
-(Intercept)   40.0776582462
-age_sec        0.2034198252
-face_max_temp  2.1724718768
-env_temp       1.9985253861
-wall_temp     -2.2869222491
-quantile1.04   0.6196778401
-quantile6.25  -0.3343201594
-std.30         0.1741506208
-std.300        0.4250291338
-time_num      -0.1531332577
+- (Intercept)   40.0776582462
+- age_sec        0.2034198252
+- face_max_temp  2.1724718768
+- env_temp       1.9985253861
+- wall_temp     -2.2869222491
+- quantile1.04   0.6196778401
+- quantile6.25  -0.3343201594
+- std.30         0.1741506208
+- std.300        0.4250291338
+- time_num      -0.1531332577
 
  R square= 0.6898, adj R square=0.6867
