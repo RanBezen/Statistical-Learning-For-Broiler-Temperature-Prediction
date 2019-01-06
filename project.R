@@ -10,10 +10,8 @@ library(neuralnet)
 require(factoextra)
 
 
-setwd("C:\\Users\\ran\\Desktop\\statistic")
-#setwd("C:\\Users\\ranbezen\\Google Drive\\statistic")  
+
 res<-read.csv('dataset.csv', header = TRUE, stringsAsFactors = FALSE)
-#res<-read.csv('ForRan.csv', header = TRUE, stringsAsFactors = FALSE)
 set.seed(8)
 #-------------------------------feature engineering--------------------------------#
 res$time_num <- round(sin(res$time_num*pi),digits = 3)
