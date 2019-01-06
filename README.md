@@ -69,7 +69,7 @@ First I ran a scale to the data matrix and then ran 10 folds cross validation. I
 # image9
 The selected lambda is the lambda that minimizes the mean square error 0.004
 The model that is attached contains all the parameters:
-- (Intercept)   |40.0776582462
+- (Intercept)   | 40.0776582462
 - age_sec       | 0.2034198252
 - face_max_temp | 2.1724718768
 - env_temp      | 1.9985253861
@@ -140,13 +140,14 @@ The final structure of the network:
 After the training, I tested the models on test data set. The indices I used for comparison are Rsquare, root mean square error (RMSE) and Mean absolute percent error (MAPE). These three measures can compare linear and nonlinear regression models. 
 
 test results:
-|model|	R square|	RMSE|	MAPE|
-|----|-----|------|------|
-|Lasso|	0.6843|	0.3185|	2.98|
-|Backward|	0.6947	|0.3115|	2.91|
-|PCA	|0.5566	|0.3753	|3.50|
-|Random Forest	|0.7984	|0.2531	|2.31|
-|Neural Networks|	0.8121|	0.2451	|2.26|
+
+|     model    |       R square     |   RMSE     |  MAPE    |
+| ------------- | ------------- |------------|------------|
+| Lasso|	0.6843|	0.3185|	2.98|
+| Backward|	0.6947	|0.3115|	2.91|
+| PCA	|0.5566	|0.3753	|3.50|
+| Random Forest	|0.7984	|0.2531	|2.31|
+| Neural Networks|	0.8121|	0.2451	|2.26|
 
 We can see that the neuronal networks have the best results in the three measures:
 R square=0.8121 , RMSE=0.2451, MAPE =2.26%
