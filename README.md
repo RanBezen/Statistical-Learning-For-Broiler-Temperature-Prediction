@@ -48,7 +48,7 @@ Let's look at the variables again in vs. serial number of the observation. The c
 
 ![Image description](https://github.com/RanBezen/Statistical-Learning-For-Broiler-Temperature-Prediction/blob/master/images/5.png)
 
-The periodicity of the observations can be seen in each of the parameters. However, in most parameters a linear relationship can be identified with the dependent variable before the coloration of the dots in the top charts, and a tendency to normality according to the density functions of the parameters
+The periodicity of the observations can be seen in each of the parameters. However, the most of parameters has a linear relationship with the dependent variable by the coloration of the dots in the top charts, and a tendency to normality according to the density functions of the parameters.
 
 ![Image description](https://github.com/RanBezen/Statistical-Learning-For-Broiler-Temperature-Prediction/blob/master/images/6.png)
 
