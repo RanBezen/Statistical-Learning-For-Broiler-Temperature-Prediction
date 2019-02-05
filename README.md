@@ -34,6 +34,12 @@ We will scale the data and present them in the boxes. and we can see that most o
 
 ![Image description](https://github.com/RanBezen/Statistical-Learning-For-Broiler-Temperature-Prediction/blob/master/images/1.png)
 
+### Log transformation
+This transformation correct the dispersion of some of the explanatory variables, the variables whose distribution of data is Gaussian with a one-sided tail. We will do this on the variables representing the standard deviations of the 30 and 300 pixels of the image.
+
+![Image description](https://github.com/RanBezen/Statistical-Learning-For-Broiler-Temperature-Prediction/blob/master/images/26.PNG)
+
+
 ###  Transformation for time time variable
 We can see the cycle in this variable. Given that the time variable is continuously measured in the range of 0-24, its values do not correctly describe reality linearly, since in the present state, values 0 and 24 are the values with the greatest distance, but in reality they should be the closest. For example: the value of the hour 23:59 is almost 24, and the value of the hour 00:01 is almost 0. The actual difference between them is only 2 minutes
 
